@@ -1,6 +1,6 @@
 // java program to check if number is prime or not
 import java.util.Scanner;
-class HelloWorld {
+class PrimeOrNot {
     // function to check prime or not
     public static boolean isPrime(int num){
         int n=num;
