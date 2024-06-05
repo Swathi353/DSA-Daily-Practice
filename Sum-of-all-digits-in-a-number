@@ -1,6 +1,6 @@
 // program to take input from the user and print sum of every digit in the number
 import java.util.Scanner;
-class HelloWorld {
+class SumOfAllDigits {
     
     public static void sum(int num){
         int ld=0,sum=0;
