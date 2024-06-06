@@ -7,7 +7,7 @@ class IsPalindrome {
         int ld=0,rev=0;
         // run loop until no value left in num
         // function to reverse the number
-        while(num>0){
+        while(num!=0){
             ld=num%10;
             rev=(rev*10)+ld;
             num=num/10;
