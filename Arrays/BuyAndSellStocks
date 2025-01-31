@@ -1,0 +1,29 @@
+import java.util.*;
+
+public class BuyAndSellStocks {
+    public static int BuyAndSell(int prices[]) {
+        int Buyprice = Integer.MAX_VALUE;
+        int maxprofit = 0;
+        for (int i = 0; i < prices.length; i++) {
+            if (Buyprice < prices[i]) {// profit (buyprice<sellingprice/todaysprofit)
+                int profit = prices[i] - Buyprice;// todays profit
+                // profit=selling price-buying price
+                maxprofit = Math.max(maxprofit, profit); // global profit
+                // tracking maximum profit until now
+            } else {
+                Buyprice = prices[i];
+                // means buyprice>sellingprice means we are in loss and thats
+                // why we update buyprice to our todays current pice
+                // in loss instead of selling we buy
+            }
+        }
+        return maxprofit;
+    }
+
+    public static void main(String[] args) {
+        int prices[] = { 7, 1, 5, 3, 6, 4 };
+        System.out.println(BuyAndSell(prices));
+    }
+}
+// Time complexity O(n)
+// directly proportional to number of stocks
