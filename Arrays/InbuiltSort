@@ -1,0 +1,18 @@
+import java.util.Arrays;
+
+public class InbuiltSort {
+    public static void main(String args[]) {
+        int arr[] = { 0, 45, 4, 56, 3, 6, 8, 60 };
+        Arrays.sort(arr);
+        for (int i = 0; i < arr.length; i++) {
+            System.out.print(arr[i] + "\t");
+        }
+        System.out.println();
+        int arr2[] = { 9, 8, 7, 6, 5, 4, 3, 2, 1 };
+        // only from index 0 to 2 will be sorted , index 3 is non inclusive
+        Arrays.sort(arr2, 0, 3);
+        for (int i = 0; i < arr2.length; i++) {
+            System.out.print(arr2[i] + "\t");
+        }
+    }
+}
