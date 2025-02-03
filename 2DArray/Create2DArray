@@ -1,0 +1,71 @@
+import java.util.*;
+
+public class Create2DArray {
+    // code to search an element from matrix 2D array
+    public static boolean Search(int matrix[][], int key) {
+        for (int i = 0; i < matrix.length; i++) {
+            for (int j = 0; j < matrix[0].length; j++) {
+                if (matrix[i][j] == key) {
+                    System.out.println("Key found at index(" + i + "," + j + ")");
+                    return true;
+                }
+            }
+        }
+        System.out.println("key not found");
+        return false;
+    }
+
+    // code to find largest element from 2D array
+    public static void Largest(int matrix[][]) {
+        int large = Integer.MIN_VALUE;
+        for (int i = 0; i < matrix.length; i++) {
+            for (int j = 0; j < matrix[0].length; j++) {
+                if (matrix[i][j] > large) {
+                    large = matrix[i][j];
+                }
+            }
+        }
+        System.out.println("Largest element is " + large);
+
+    }
+
+    // code to find smallest element from 2D array
+    public static void smallest(int matrix[][]) {
+        int small = Integer.MAX_VALUE;
+        for (int i = 0; i < matrix.length; i++) {
+            for (int j = 0; j < matrix[0].length; j++) {
+                if (matrix[i][j] < small) {
+                    small = matrix[i][j];
+                }
+            }
+        }
+        System.out.println("Smallest element is " + small);
+
+    }
+
+    public static void main(String args[]) {
+        int matrix[][] = new int[3][3];
+        int n = matrix.length;
+        int m = matrix[0].length;
+        int key = 4;
+        System.out.println("Enter elements of array");
+        Scanner sc = new Scanner(System.in);
+        // code to get user input
+        for (int i = 0; i < n; i++) {
+            for (int j = 0; j < m; j++) {
+                matrix[i][j] = sc.nextInt();
+            }
+        }
+        // code to print 2D array
+        for (int i = 0; i < n; i++) {
+            for (int j = 0; j < m; j++) {
+                System.out.print(matrix[i][j] + "  ");
+            }
+            System.out.println();
+        }
+        Search(matrix, key);
+        Largest(matrix);
+        smallest(matrix);
+    }
+
+}
