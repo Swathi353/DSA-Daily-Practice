@@ -1,0 +1,6 @@
+public class CreateString {
+    public static void main(String args[]) {
+        String firstname = "Aaradhana";
+        System.out.println(firstname);
+    }
+}
