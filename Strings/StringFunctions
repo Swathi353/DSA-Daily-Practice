@@ -1,0 +1,15 @@
+// Source code is decompiled from a .class file using FernFlower decompiler.
+
+public class StringFunctions {
+   public StringFunctions() {
+   }
+
+   public static void main(String[] var0) {
+      String var1 = "Aaradhya";
+      String var2 = "Leva Patil";
+      System.out.println(var1.length());
+      System.out.println(var2.length());
+      String var3 = var1 + " " + var2;
+      System.out.println(var3);
+   }
+}
