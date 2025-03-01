@@ -1,0 +1,27 @@
+package Strings;
+
+public class checkpalindrome {
+    public static boolean Palindrome(String str) {
+        int n = str.length();
+        for (int i = 0; i < str.length() / 2; i++) {
+            if (str.charAt(i) != str.charAt(n - i - 1)) {
+                // not a palindrome condition
+                return false;
+
+            }
+        }
+        return true;
+        // yes a palindrome
+    }
+
+    public static void main(String args[]) {
+        String str = "noon";
+        boolean check = Palindrome(str);
+        if (check == true) {
+            System.out.println(str + " is a palindrome");
+        } else {
+            System.out.println(str + " is not a palindrome");
+        }
+
+    }
+}
