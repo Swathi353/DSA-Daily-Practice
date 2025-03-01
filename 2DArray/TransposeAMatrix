@@ -1,0 +1,40 @@
+// Write a program to Find Transpose of a Matrix.
+// What is Transpose?
+// Transpose of a matrix is the process of swapping the rows to columns. For a 2x3 matrix,
+// Matrix
+// a11 a12 a13
+// a21 a22 a23
+// Transposed Matrix
+// a11 a21
+// a12 a22
+// a13 a23
+public class TransposeAMatrix {
+    public static void Transpose(int matrix[][]) {
+        int row = 2;
+        int col = 3;
+        int transposed[][] = new int[col][row];
+        for (int i = 0; i < row; i++) {
+            for (int j = 0; j < col; j++) {
+
+                transposed[j][i] = matrix[i][j];
+
+            }
+        }
+        System.out.println("Printing Transposed array");
+        for (int k = 0; k < transposed.length; k++) {
+            for (int l = 0; l < transposed[0].length; l++) {
+                System.out.print(transposed[k][l] + " ");
+            }
+            System.out.println();
+        }
+
+    }
+
+    public static void main(String[] args) {
+        int matrix[][] = {
+                { 1, 2, 3 },
+                { 4, 5, 6 }
+        };
+        Transpose(matrix);
+    }
+}
