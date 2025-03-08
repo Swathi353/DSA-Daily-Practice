@@ -1,0 +1,18 @@
+package Strings;
+
+public class LargestString {
+    // find largest element in a lexicographic order
+    public static void main(String[] args) {
+        String fruits[] = { "apple", "mango", "banana" };
+        String largest = fruits[0];
+        // assume 1st element as largest
+        for (int i = 1; i < fruits.length; i++) {
+            // loop from 1 since we considered 0th index as largest
+            if (largest.compareTo(fruits[i]) < 0) {
+                largest = fruits[i];
+            }
+        }
+        System.out.println(largest);
+
+    }
+}
