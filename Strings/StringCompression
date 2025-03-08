@@ -1,0 +1,25 @@
+package Strings;
+
+public class StringCompression {
+    public static void Compress(String sb) {
+        String newsb = new String("");
+        for (int i = 0; i < sb.length(); i++) {
+            Integer count = 1;
+            while (i < sb.length() - 1 && sb.charAt(i) == sb.charAt(i + 1)) {
+                count++;
+                i++;
+            }
+            newsb += sb.charAt(i);
+            if (count > 1) {
+                newsb += count.toString();
+            }
+        }
+        System.out.println(newsb);
+    }
+
+    public static void main(String args[]) {
+
+        String sb = new String("AAAABBCDDD");
+        Compress(sb);
+    }
+}
